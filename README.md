@@ -1,4 +1,4 @@
-# pulse-ui
+# pulse-ui-react
 
 Alertas, toasts y badges accesibles para React, estilizados con Tailwind CSS.
 

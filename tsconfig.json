@@ -5,7 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "paths": {
-      "pulse-ui": ["./src/index.ts"]
+      "pulse-ui-react": ["./src/index.ts"]
     },
     "jsx": "react-jsx",
     "strict": true,

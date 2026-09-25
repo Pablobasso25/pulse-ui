@@ -1,5 +1,5 @@
 {
-  "name": "pulse-ui",
+  "name": "pulse-ui-react",
   "version": "0.0.9",
   "description": "Alertas, toasts y badges accesibles para React, estilizados con Tailwind CSS. Instalación sin configuración.",
   "type": "module",
@@ -7,7 +7,7 @@
   "author": "Pablo Basso <pablobasso25@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pablobasso25/pulse-ui.git"
+    "url": "git+https://github.com/Pablobasso25/pulse-ui.git"
   },
   "homepage": "https://github.com/Pablobasso25/pulse-ui#readme",
   "bugs": {

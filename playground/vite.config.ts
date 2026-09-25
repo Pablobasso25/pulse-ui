@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      'pulse-ui': fileURLToPath(
+      'pulse-ui-react': fileURLToPath(
         new URL('../src/index.ts', import.meta.url),
       ),
     },

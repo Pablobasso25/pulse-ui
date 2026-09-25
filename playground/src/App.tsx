@@ -1,4 +1,4 @@
-import { alert } from 'pulse-ui'
+import { alert } from 'pulse-ui-react'
 
 async function handleConfirm() {
   const confirmed = await alert.confirm({
@@ -31,7 +31,7 @@ const buttonStyles =
 export function App() {
   return (
     <main className="min-h-screen bg-slate-950 p-10 text-slate-100">
-      <h1 className="text-3xl font-bold">pulse-ui · playground</h1>
+      <h1 className="text-3xl font-bold">pulse-ui-react · playground</h1>
       <p className="mt-2 text-slate-400">Probá las alertas imperativas:</p>
       <div className="mt-8 flex flex-wrap gap-3">
         <button type="button" className={buttonStyles} onClick={() => void handleConfirm()}>
