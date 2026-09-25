@@ -1,6 +1,6 @@
 {
   "name": "pulse-ui",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Alertas, toasts y badges accesibles para React, estilizados con Tailwind CSS. Instalación sin configuración.",
   "type": "module",
   "license": "MIT",
