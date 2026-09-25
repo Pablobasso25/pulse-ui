@@ -1,28 +1,11 @@
-/*
- * Estilos de pulse-ui.
- *
- * Decisión clave: NO incluimos el preflight de Tailwind (el reset global).
- * Importamos solo `theme` + `utilities` para que la librería no altere
- * los estilos del proyecto que la consume. El consumidor solo necesita
- * importar `pulse-ui/style.css` una vez en el entry de su app.
- *
- * Orden de capas: theme < base < components < utilities.
- * Así las utilidades de Tailwind siempre ganan sobre nuestros estilos base.
- */
 @layer theme, base, components, utilities;
 
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities) source(none);
 
-/* Escaneamos únicamente el código fuente de la librería. */
-@source "./";
+@source "./**/*.tsx";
 
 @theme {
-  /*
-   * Tokens semánticos de variantes.
-   * Los consumidores pueden redefinir estas variables en su CSS para
-   * personalizar la paleta sin tocar los componentes.
-   */
   --color-pulse-success: oklch(69.6% 0.17 162.48);
   --color-pulse-success-strong: oklch(59.6% 0.145 163.225);
   --color-pulse-success-soft: oklch(97.9% 0.021 166.113);
@@ -43,7 +26,6 @@
   --color-pulse-neutral-strong: oklch(44.6% 0.043 257.281);
   --color-pulse-neutral-soft: oklch(96.8% 0.007 247.896);
 
-  /* Animaciones de entrada y salida (se emiten solo si se usan). */
   --animate-pulse-fade-in: pulse-fade-in 150ms ease-out;
   --animate-pulse-pop-in: pulse-pop-in 180ms cubic-bezier(0.16, 1, 0.3, 1);
   --animate-pulse-slide-in-right: pulse-slide-in-right 200ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -138,18 +120,12 @@
   }
 }
 
-/* Niveles de apilamiento configurables por el consumidor. */
 :root {
   --pulse-z-modal: 9998;
   --pulse-z-toast: 9999;
 }
 
 @layer components {
-  /*
-   * Reset mínimo para nuestros componentes.
-   * Reemplaza lo indispensable del preflight sin afectar al resto del sitio:
-   * box-sizing consistente y herencia de tipografía en botones.
-   */
   .pulse-reset {
     box-sizing: border-box;
     margin: 0;
