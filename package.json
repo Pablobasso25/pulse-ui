@@ -1,0 +1,75 @@
+{
+  "name": "pulse-ui",
+  "version": "0.1.0",
+  "description": "Alertas, toasts y badges accesibles para React, estilizados con Tailwind CSS. Instalación sin configuración.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Pablo Basso <pablobasso25@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pablobasso25/pulse-ui.git"
+  },
+  "homepage": "https://github.com/Pablobasso25/pulse-ui#readme",
+  "bugs": {
+    "url": "https://github.com/Pablobasso25/pulse-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "toast",
+    "alert",
+    "confirm",
+    "modal",
+    "badge",
+    "ui",
+    "components",
+    "accessibility"
+  ],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "scripts": {
+    "dev": "vite --config playground/vite.config.ts",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "pack:test": "pnpm build && pnpm pack",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@typescript/typescript6": "^6.0.2",
+    "@vitejs/plugin-react": "^6.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vite-plugin-dts": "^5.1.1"
+  }
+}
